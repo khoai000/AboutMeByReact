@@ -57,12 +57,12 @@ const Header = () => {
       <div className="h-16">
         <h1 className="text-neon text-4xl">{text}</h1>
       </div>
-      <div className="flex flex-row gap-10" >
+      <div className="flex flex-row gap-10 mt-3">
         <a href={CV} className="btn mt-4" download={true}>
           Download CV
         </a>
         <a href="#contact" className="btn2 mt-4">
-        Contact Me
+          Contact Me
         </a>
       </div>
       <div className="flex flex-row justify-center">

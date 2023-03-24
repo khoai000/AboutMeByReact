@@ -8,14 +8,32 @@ import {
 import "./navigation.css";
 
 const Navigation = () => {
-  const [navActive, setNavActive] = useState("#contact");
+  const [navActive, setNavActive] = useState("#header");
 
   return (
-    <nav>
+    <nav
+      ref={(el) => {
+        if (!el) return;
+        console.log("initial height", el.getBoundingClientRect().height);
+        let prevValue = JSON.stringify(el.getBoundingClientRect());
+        const start = Date.now();
+        const handle = setInterval(() => {
+          let nextValue = JSON.stringify(el.getBoundingClientRect());
+          if (nextValue === prevValue) {
+            clearInterval(handle);
+            console.log(
+              `width stopped changing in ${Date.now() - start}ms. final width:`,
+              el.getBoundingClientRect().height
+            );
+          } else {
+            prevValue = nextValue;
+          }
+        }, 100);
+      }}
+    >
       <a
         href="#header"
         onClick={() => {
-          console.log(navActive);
           setNavActive("#header");
         }}
         className={navActive === "#header" ? "navActive" : ""}
@@ -25,7 +43,6 @@ const Navigation = () => {
       <a
         href="#about"
         onClick={() => {
-          console.log(navActive);
           setNavActive("#about");
         }}
         className={navActive === "#about" ? "navActive" : ""}
@@ -35,7 +52,6 @@ const Navigation = () => {
       <a
         href="#experience"
         onClick={() => {
-          console.log(navActive);
           setNavActive("#experience");
         }}
         className={navActive === "#experience" ? "navActive" : ""}
@@ -45,7 +61,6 @@ const Navigation = () => {
       <a
         href="#contact"
         onClick={() => {
-          console.log(navActive);
           setNavActive("#contact");
         }}
         className={navActive === "#contact" ? "navActive" : ""}

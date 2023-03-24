@@ -10,10 +10,10 @@ import {
 const About = () => {
   return (
     <div
-      className="container h-[100vh] overflow-hidden flex flex-col items-center"
+      className="container h-[80vh] overflow-hidden flex flex-col items-center"
       id="about"
     >
-      <h5 className="text-base mt-20">Get to know</h5>
+      <h5 className="text-base mt-16">Get to know</h5>
       <h1 className="mt-[6px] mb-20 text-4xl text-[#128f6c]">About Me</h1>
       <div className="flex flex-row w-full gap-24">
         <div className="basis-1/2 flex justify-end">
@@ -129,7 +129,11 @@ const About = () => {
             fill="#fff"
           ></path>
         </svg>
-        <img alt="Sass" className="tech-icon" src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"></img>
+        <img
+          alt="Sass"
+          className="tech-icon"
+          src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg"
+        ></img>
       </div>
     </div>
   );

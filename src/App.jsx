@@ -13,7 +13,6 @@ function App() {
       <About />
       <Experience />
       <Contact />
-      <div className="h-80"></div>
     </div>
   );
 }

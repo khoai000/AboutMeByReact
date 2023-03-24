@@ -1,5 +1,5 @@
 .contact {
-    height: 100vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +12,33 @@ a {
 .contact-container {
     display: grid; 
     margin-top: 60px;
-    grid-template-columns: 40% 60%;
-    grid-column-gap: 3rem;
+    grid-template-columns: 35% 65%;
+    grid-column-gap: 8.5rem;
+    width: 100%;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.contact-card__detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+    border: 1px solid white;
+    padding: 12px 24px;
+    width: 12rem;
+    height: 6rem;
+    border-radius: 1rem;
+    background-color: var(--color-bg-variant);
+}
+
+.btn-submit {
+    background: #1677ff;
+    height: 42px;
 }
