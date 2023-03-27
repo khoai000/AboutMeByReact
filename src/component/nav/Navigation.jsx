@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   HomeOutlined,
   UserOutlined,
@@ -10,27 +10,24 @@ import "./navigation.css";
 const Navigation = () => {
   const [navActive, setNavActive] = useState("#header");
 
+  useEffect(() => {
+    const handleScroll = (event) => {
+      const docsLength = window.scrollY;
+      if (docsLength < 500) setNavActive("#header");
+      if (docsLength >= 500) setNavActive("#about");
+      if (docsLength >= 1200) setNavActive("#experience");
+      if (docsLength >= 1800) setNavActive("#contact");
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav
-      ref={(el) => {
-        if (!el) return;
-        console.log("initial height", el.getBoundingClientRect().height);
-        let prevValue = JSON.stringify(el.getBoundingClientRect());
-        const start = Date.now();
-        const handle = setInterval(() => {
-          let nextValue = JSON.stringify(el.getBoundingClientRect());
-          if (nextValue === prevValue) {
-            clearInterval(handle);
-            console.log(
-              `width stopped changing in ${Date.now() - start}ms. final width:`,
-              el.getBoundingClientRect().height
-            );
-          } else {
-            prevValue = nextValue;
-          }
-        }, 100);
-      }}
-    >
+    <nav>
       <a
         href="#header"
         onClick={() => {
@@ -47,7 +44,7 @@ const Navigation = () => {
         }}
         className={navActive === "#about" ? "navActive" : ""}
       >
-        <UserOutlined />
+        <UserOutlined spin={navActive === "#about"} />
       </a>
       <a
         href="#experience"
@@ -56,7 +53,7 @@ const Navigation = () => {
         }}
         className={navActive === "#experience" ? "navActive" : ""}
       >
-        <BookOutlined />
+        <BookOutlined spin={navActive === "#experience"} />
       </a>
       <a
         href="#contact"
@@ -65,7 +62,7 @@ const Navigation = () => {
         }}
         className={navActive === "#contact" ? "navActive" : ""}
       >
-        <ContactsOutlined />
+        <ContactsOutlined spin={navActive === "#contact"} />
       </a>
     </nav>
   );

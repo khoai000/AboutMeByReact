@@ -19,7 +19,7 @@ const Header = () => {
       forwards = true,
       skip_count = 0,
       skip_delay = 15,
-      speed = 70;
+      speed = 85;
     setInterval(() => {
       if (forwards) {
         if (offset >= words[i].length) {

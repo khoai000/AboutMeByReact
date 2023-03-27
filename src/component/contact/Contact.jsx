@@ -1,6 +1,7 @@
 import React from "react";
 import "./contact.css";
 import GMAIL from "../../assets/mail.jpg";
+import MESS from "../../assets/messenger.png";
 import { Button, Form, Input, message } from "antd";
 import { useForm } from "antd/es/form/Form";
 import emailjs from "emailjs-com";
@@ -44,11 +45,7 @@ const Contact = () => {
             </a>
           </div>
           <div className="contact-card__detail">
-            <img
-              className="object-cover w-6"
-              src="https://scontent.fhan3-2.fna.fbcdn.net/v/t39.8562-6/120009688_325579128711709_1736249742330805861_n.png?_nc_cat=1&amp;ccb=1-7&amp;_nc_sid=6825c5&amp;_nc_ohc=lgyubOiBpT0AX-qBcb-&amp;_nc_ht=scontent.fhan3-2.fna&amp;oh=00_AfDjWeBAmE66e_aOR5XYB5ue97snjJfAVFIVJpj_-27YoQ&amp;oe=641CCE3D"
-              alt="Messenger"
-            />
+            <img className="object-cover w-6" src={MESS} alt="Messenger" />
             {/* <p>duonghainguyen000@gmail.com</p> */}
             <a href="https://www.messenger.com/t/100007023756081">
               Send a message
@@ -115,9 +112,6 @@ const Contact = () => {
             </Button>
           </Form>
         </div>
-      </div>
-      <div className="footer-container">
-        <h5>NHD.Dev </h5>
       </div>
     </div>
   );

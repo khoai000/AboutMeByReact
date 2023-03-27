@@ -4,6 +4,7 @@ import Header from "./component/header/Header";
 import Navigation from "./component/nav/Navigation";
 import Experience from "./component/experience/Experience";
 import Contact from "./component/contact/Contact";
+import Footer from "./component/footer/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <About />
       <Experience />
       <Contact />
+      <Footer />
     </div>
   );
 }
