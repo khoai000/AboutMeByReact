@@ -1,44 +1,96 @@
 .contact {
-    /* height: 95vh; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-a { 
-    color: aquamarine;
+.contact h5 {
+  margin-top: 4rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.contact h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+a {
+  color: aquamarine;
 }
 
 .contact-container {
-    display: grid; 
-    margin-top: 60px;
-    grid-template-columns: 35% 65%;
-    grid-column-gap: 8.5rem;
-    width: 100%;
+  display: grid;
+  margin-top: 60px;
+  grid-template-columns: 35% 65%;
+  grid-column-gap: 8.5rem;
+  width: 100%;
 }
 
 .contact-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2.5rem
 }
 
 .contact-card__detail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-bottom: 3rem;
-    border: 1px solid white;
-    padding: 12px 24px;
-    width: 12rem;
-    height: 6rem;
-    border-radius: 1rem;
-    background-color: var(--color-bg-variant);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid white;
+  padding: 12px 24px;
+  width: 12rem;
+  height: 6rem;
+  border-radius: 1rem;
+  background-color: var(--color-bg-variant);
 }
 
 .btn-submit {
-    background: #1677ff;
-    height: 42px;
+  background: #1677ff;
+  height: 42px;
+}
+
+/* ============== Responsive =============== */
+@media screen and (max-width: 1366px) {
+  .contact-container {
+    grid-column-gap: 6.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .contact h5 {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        margin-top: 2rem;
+      }
+      
+      .contact h1 {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+      }
+
+      .contact-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+        gap: 1.5rem;
+      }
+
+      .contact-card {
+        align-items: center;
+        gap: 1.35rem;
+      }
+
+      .contact-card__detail {
+        width: 11.5rem;
+        height: 5rem;
+      }
+
+      .contact-form {
+        width: 80%;
+        margin: 0 auto;
+      }
 }

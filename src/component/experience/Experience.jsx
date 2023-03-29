@@ -4,13 +4,10 @@ import { CheckCircleOutlined } from "@ant-design/icons";
 
 const Experience = () => {
   return (
-    <div
-      className="container h-[70vh] overflow-hidden flex flex-col items-center"
-      id="experience"
-    >
-      <h5 className="text-base mt-16">What Skills I Have</h5>
-      <h1 className="mt-[6px] mb-20 text-4xl text-[#128f6c]">My Experience</h1>
-      <div className="exp-container">
+    <div className="exp-container" id="experience">
+      <h5>What Skills I Have</h5>
+      <h1 className="text-[#128f6c]">My Experience</h1>
+      <div className="exp-card">
         <div className="exp-frontend">
           <h3>Frontend Deverloper</h3>
           <div className="exp-content">

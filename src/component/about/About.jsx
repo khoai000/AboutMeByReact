@@ -9,14 +9,11 @@ import {
 
 const About = () => {
   return (
-    <div
-      className="container h-[80vh] overflow-hidden flex flex-col items-center"
-      id="about"
-    >
-      <h5 className="text-base mt-16">Get to know</h5>
-      <h1 className="mt-[6px] mb-20 text-4xl text-[#128f6c]">About Me</h1>
-      <div className="flex flex-row w-full gap-24">
-        <div className="basis-1/2 flex justify-end">
+    <div className="about-container" id="about">
+      <h5>Get to know</h5>
+      <h1 className="text-[#128f6c]">About Me</h1>
+      <div className="about-content">
+        <div className="about-content__book">
           <figure className="book">
             {/* <!-- Front --> */}
             <ul className="hardcover_front">
@@ -49,8 +46,8 @@ const About = () => {
             </ul>
           </figure>
         </div>
-        <div className="basis-1/2">
-          <div className="flex">
+        <div className="about-content__info">
+          <div className="flex gap-10">
             <div className="about-card">
               <RiseOutlined style={{ fontSize: "24px", marginTop: "-12px" }} />
               <h3 className="mt-2 font-bold text-xl">Experience</h3>
@@ -85,7 +82,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="mt-10 flex gap-10">
+      <div className="about-tech">
         <h3 className="text-2xl mt-[2px]">Tech Stack: </h3>
         <img
           className="tech-icon"

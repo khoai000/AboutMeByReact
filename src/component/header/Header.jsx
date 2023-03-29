@@ -9,7 +9,7 @@ import {
 } from "@ant-design/icons";
 
 const Header = () => {
-  const [text, setText] = useState("Nguyen Hai Duong");
+  const [text, setText] = useState("Nguyễn Hải Dương");
 
   useEffect(() => {
     let words = ["Nguyễn Hải Dương", "Frontend Deverloper"],
@@ -52,12 +52,12 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="container flex flex-col items-center" id="header">
-      <h5 className="mt-16 mb-1 text-lg">Hello I'm</h5>
-      <div className="h-16">
-        <h1 className="text-neon text-4xl">{text}</h1>
+    <div className="header-container" id="header">
+      <h5>Hello I'm</h5>
+      <div className="sm:h-16 h-8">
+        <h1 className="text-neon">{text}</h1>
       </div>
-      <div className="flex flex-row gap-10 mt-3">
+      <div className="btn-container">
         <a href={CV} className="btn mt-4" download={true}>
           Download CV
         </a>
@@ -65,8 +65,8 @@ const Header = () => {
           Contact Me
         </a>
       </div>
-      <div className="flex flex-row justify-center">
-        <div className="flex flex-col -ml-28 mr-20 mt-56 gap-10">
+      <div className="box-media">
+        <div className="app-container">
           <a href="https://www.facebook.com/canhcut.dl/">
             <FacebookOutlined className="app-icon" />
           </a>
@@ -79,7 +79,7 @@ const Header = () => {
         </div>
         <img src={ME} alt="me" className="me" />
       </div>
-    </header>
+    </div>
   );
 };
 

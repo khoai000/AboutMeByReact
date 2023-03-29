@@ -22,6 +22,7 @@ body {
     rgba(23, 9, 121, 0.9009978991596639) 53%,
     rgba(106, 11, 11, 1) 100%
   );
+  background-repeat: no-repeat;
   color: var(--color-white);
   line-height: 1.7;
 }

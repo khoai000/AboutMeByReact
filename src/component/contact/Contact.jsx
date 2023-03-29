@@ -27,8 +27,8 @@ const Contact = () => {
 
   return (
     <div className="contact" id="contact">
-      <h5 className="text-base mt-16">Get In Touch</h5>
-      <h1 className="mt-[6px] text-4xl text-[#128f6c]">Contact Me</h1>
+      <h5>Get In Touch</h5>
+      <h1 className="text-[#128f6c]">Contact Me</h1>
       <div className="contact-container">
         <div className="contact-card">
           <div className="contact-card__detail">
@@ -70,7 +70,6 @@ const Contact = () => {
             style={{ maxWidth: 600 }}
             initialValues={{ remember: true }}
             onFinish={onFinish}
-            // onFinishFailed={onFinishFailed}
             autoComplete="off"
           >
             <Form.Item

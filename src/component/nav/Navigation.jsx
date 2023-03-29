@@ -27,7 +27,7 @@ const Navigation = () => {
   }, []);
 
   return (
-    <nav>
+    <div className="nav-container">
       <a
         href="#header"
         onClick={() => {
@@ -64,7 +64,7 @@ const Navigation = () => {
       >
         <ContactsOutlined spin={navActive === "#contact"} />
       </a>
-    </nav>
+    </div>
   );
 };
 

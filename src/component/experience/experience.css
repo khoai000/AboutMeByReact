@@ -1,44 +1,125 @@
 .exp-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap : 5rem
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
-.exp-container > div {
-    background: var(--color-bg-variant);
-    padding: 2.4rem 5rem;
-    border-radius: 2rem;
-    border: 1px solid transparent;
-    transition: var(--transition);
+.exp-container h5 {
+  margin-top: 4rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
-.exp-container > div:hover {
-    background: transparent;
-    border-color: var(--color-white);
-    cursor: default;
+.exp-container h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
-.exp-container > div h3 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--color-white);
-    font-size: 1.4rem;
-    text-decoration: underline;
+.exp-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.exp-card > div {
+  background: var(--color-bg-variant);
+  padding: 2.4rem 5rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.exp-card > div:hover {
+  background: transparent;
+  border-color: var(--color-white);
+  cursor: default;
+}
+
+.exp-card > div h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-white);
+  font-size: 1.4rem;
+  text-decoration: underline;
 }
 
 .exp-content {
-    display: grid; 
-    grid-template-columns: auto auto;
-    grid-gap: 3rem 7rem;
-    font-size: 1rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 3rem 7rem;
+  font-size: 1rem;
 }
 
 .exp-detail {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .exp-detail__icon {
-    margin-top: 6px;
+  margin-top: 6px;
 }
 
+@media screen and (max-width: 1366px) {
+
+  .exp-card {
+    gap: 3.5rem;
+    margin-bottom: 3.75rem;
+  }
+
+  .exp-card > div {
+    padding: 1.75rem 3.25rem;
+  }
+
+  .exp-card > div h3 {
+    font-size: 1.35rem;
+  }
+
+  .exp-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1.25rem 2.75rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .exp-container h5 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin-top: 2rem;
+  }
+  
+  .exp-container h1 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.45rem;
+  }
+
+  .exp-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2.75rem;
+  }
+
+  .exp-card > div {
+    padding: 1.25rem 2rem;
+  }
+
+  .exp-card > div h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .exp-content {
+    grid-gap: 1.75rem 2.5rem;
+    font-size: 0.85rem;
+  }
+}
