@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/AboutMeByReact/static/css/main.8ab4022d.css",
-    "main.js": "/AboutMeByReact/static/js/main.2f49b4bb.js",
+    "main.js": "/AboutMeByReact/static/js/main.cd9e1add.js",
     "static/media/avt.jpg": "/AboutMeByReact/static/media/avt.94cf20725b96ebd95295.jpg",
     "static/media/coder1.png": "/AboutMeByReact/static/media/coder1.f0a919adc4127c1ff7dc.png",
-    "static/media/cv.pdf": "/AboutMeByReact/static/media/cv.cd9e925ee1b34d880cb4.pdf",
+    "static/media/Nguyễn Hải Dương - CV Frontend Dev.pdf": "/AboutMeByReact/static/media/Nguyễn Hải Dương - CV Frontend Dev.9b35c00bf6fe7fd67bda.pdf",
     "static/media/mail.jpg": "/AboutMeByReact/static/media/mail.b52d2c5fa6a1ae8eced9.jpg",
     "static/media/coder2.png": "/AboutMeByReact/static/media/coder2.52d5299f3ee49c037de5.png",
     "static/media/messenger.png": "/AboutMeByReact/static/media/messenger.c0677ba4eafc20038e9e.png",
     "index.html": "/AboutMeByReact/index.html",
     "main.8ab4022d.css.map": "/AboutMeByReact/static/css/main.8ab4022d.css.map",
-    "main.2f49b4bb.js.map": "/AboutMeByReact/static/js/main.2f49b4bb.js.map"
+    "main.cd9e1add.js.map": "/AboutMeByReact/static/js/main.cd9e1add.js.map"
   },
   "entrypoints": [
     "static/css/main.8ab4022d.css",
-    "static/js/main.2f49b4bb.js"
+    "static/js/main.cd9e1add.js"
   ]
 }
