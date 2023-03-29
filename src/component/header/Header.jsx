@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import CV from "../../assets/cv.pdf";
-import ME from "../../assets/avt.jpg";
+import CV from "../../assets/Nguyễn Hải Dương - CV Frontend Dev.pdf";
+import ME from "../../assets/IMG_0489.JPG";
 import "./header.css";
 import {
   FacebookOutlined,

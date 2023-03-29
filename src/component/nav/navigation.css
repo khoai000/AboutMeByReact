@@ -28,6 +28,5 @@
 }
 
 .navActive {
-  background: #1f1f38;
-  color: #fff;
+  background: rgba(0, 0, 0, 0.3) !important;
 }
